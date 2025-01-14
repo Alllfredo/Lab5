@@ -6,6 +6,13 @@ BinaryTreeNode::BinaryTreeNode(int value)
 
 BinaryTreeNode::~BinaryTreeNode() 
 {
-    delete Left;
-    delete Right;
+    if (Left != nullptr)
+    {
+        delete Left;
+    }
+
+    if (Right != nullptr)
+    {
+        delete Right;
+    }
 }
