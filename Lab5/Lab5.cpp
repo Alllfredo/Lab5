@@ -62,6 +62,7 @@ void PrintTree(const BinaryTreeNode* node, int depth = 0)
     {
         return;
     }
+
     PrintTree(node->Right, depth + 1);
     cout << setw(4 * depth) << "" << node->Data << "\n";
     PrintTree(node->Left, depth + 1);
@@ -73,6 +74,7 @@ void PrintTree(const TreapNode* node, int depth = 0)
     {
         return;
     }
+
     PrintTree(node->Right, depth + 1);
     cout << setw(4 * depth) << "" << node->Key << "(" << node->Priority << ")\n";
     PrintTree(node->Left, depth + 1);
@@ -91,6 +93,7 @@ int main()
             PrintMainMenu();
             cout << "Your choice: ";
         }
+
         ValidateIntegerInput(mainChoice);
         switch (mainChoice)
         {
